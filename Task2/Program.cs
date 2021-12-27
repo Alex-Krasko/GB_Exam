@@ -1,5 +1,5 @@
 ﻿int [] arrayA = new int[50];
-int minValue = 0;
+int minValue = -99;
 int maxValue = 100;
 
 int[] FillArray(int[] arr)   // Заполнение массива случайными числами
@@ -50,3 +50,4 @@ arrayA = FillArray(arrayA);
 Console.Write("First array: ");
 PrintArray(arrayA);
 Console.Write("Second array: ");
+PrintArray(SortArray(arrayA));
