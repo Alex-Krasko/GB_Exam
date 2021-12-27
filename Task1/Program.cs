@@ -2,6 +2,15 @@
 int minValue = 0;
 int maxValue = 100;
 
+int[] FillArray(int[] arr)   // Заполнение массива случайными числами
+{
+    for(int j=0; j<arr.Length; j++) 
+        {
+            arr[j] = new Random().Next(minValue,maxValue);
+        } 
+    return arr;
+}
+
 void PrintArray(int[] col)  // Вывод массива в консоль
 {
     int count = col.Length;
@@ -12,15 +21,6 @@ void PrintArray(int[] col)  // Вывод массива в консоль
             position++;
     }  
     Console.WriteLine();
-}
-
-int[] FillArray(int[] arr)   // Заполнение массива случайными числами
-{
-    for(int j=0; j<arr.Length; j++) 
-        {
-            arr[j] = new Random().Next(minValue,maxValue);
-        } 
-    return arr;
 }
 
 int[] SortArray(int[] arr)  // Поиск четных чисел в массиве А и помещение в массив Б
